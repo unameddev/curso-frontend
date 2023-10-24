@@ -31,3 +31,15 @@ git clone https://github.com/unameddev/curso-frontend.git
 
 ## Gitflow
 Fluxo do Git
+
+### Branchs
+São ramificações / versões paralelas
+    
+    - main / master (vai para produção, quando o projeto é publicado)
+    - develop       (utilizar apenas para desenvolvimento e testes)
+    - DOD (Definitinion of Done): critérios de aceite
+    - versionamento 1.1.10 (1º digito - apenas para quando a versão estiver totalmente consolidada, 2º digito - quando grandes alterações forem feitas, 3º digito - quando pequenas alterações e/ou correções de bugs forem feitos)
+
+    - nunca commitar com nenhum bug, somente quando tiver certeza que todo o código está perfeito
+
+    
