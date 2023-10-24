@@ -1,0 +1,82 @@
+table {
+	background: #fff;
+	width: auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+tbody, tfoot {
+	font-family: sans-serif;
+}
+
+caption	{
+	font-weight: 600;
+	font-family: sans-serif;
+	font-size: 6rem;
+	text-align: left;
+	color: #333;
+}
+
+table tr {
+	border: 1px solid #72bcd4;
+}
+
+table tbody tr:nth-child(odd) { /* 'even' para linhas pares 'odd' para linhas impares / nth-child basicamente quer dizer 'filho numero: ' */
+	background-color: #EEEEFF;
+}
+
+table tbody tr:hover {
+	background-color: rgba(0, 0, 185, .5);
+}
+
+table th, table td {
+	padding: 1rem;
+	font-size: 1.6rem;
+	text-align: center;
+   /* border: 1px solid #454545; */
+	height: 6rem;
+	vertical-align: middle; /* ou middle */
+	border: 0.5px solid #72bcd4;
+}
+
+table tr td:first-child {
+	text-align: center;
+	font-weight: 600;
+
+}
+
+.table-col {
+	font-weight: 600;
+}
+
+table th {
+	background-color: #234589;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.table-container {
+	padding: 2rem 1rem;
+}
+
+.table-container h3 {
+	font-size: 2.2rem;
+	font-style: normal;
+	margin-bottom: 1rem;
+}
+
+.table-container tfoot {
+	background: #eee;
+}
+
+.table-container tfoot td {
+	font-weight: 600;
+}
+
+.cell-highlight {
+	background-color: gold;
+	font-weight: 600;
+}

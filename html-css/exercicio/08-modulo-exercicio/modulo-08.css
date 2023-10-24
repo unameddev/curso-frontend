@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo básico para a navegação */
+header {
+    background-color: #0a0a0a; /* Cor de fundo */
+    padding: 20px 0; /* Espaçamento interno */
+}
+
+.background {
+    background-image: url(../images/landscape.jpg);
+    width: 100%;
+    height: 680px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: inline-end;
+    line-height: 50px;
+    width: 70%;
+    text-align: right;
+}
+
+.nav-list li {
+    display: inline; /* Faz com que os itens da lista fiquem lado a lado */
+    margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
+
+.nav-list li:last-child {
+    margin-right: 20px; /* Remove o espaçamento à direita do último item */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #fff; /* Cor do texto dos links */
+    font-weight: bold; /* Estilo da fonte */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.nav-list a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o mouse passa por cima */
+}
+
+.nav-h1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 30%;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1e1e1e;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+footer h2 {
+    text-align: center;
+    line-height: 130px;
+}

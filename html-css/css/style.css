@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	font-family: serif;
+	font-size: 62.5%; /* equivalente a 10px */
+}
+
+body {
+  background-color: white;
+}
+
+h1, h2, h3, p, li {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #454545;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 4rem; /* equivalente a 20px, pois tem como base o elemento root (html) */
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+/* Style the header */
+header {
+  background-color: #DDDDDD;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+a {
+	color: #454545;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* #primeiro-link a {
+	color: #454545;
+}
+*/
+
+ul {
+	font-size: 20px;
+}
+
+ul li {
+	font-size: .8em; /* equivalente a 16px, pois tem como base o elemento pai (ul)  */
+	width: 80%;
+}
+
+p {
+	font-size: 1.6rem; /* equivalente a 16px, pois tem como base o elemento root (html)  */
+}
+
+.navegacao {
+	background-color: #CCCCCC;
+}
+
+form div {
+	background: #fff;
+	margin: 1rem;
+	/*
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	*/
+	padding: 2rem;
+	/*
+	border: 1px solid #33f;
+	border-top: 1px solid #33f;
+	border-left: 1px solid #33f;
+	border-right: 1px solid #33f;
+	*/
+	border-bottom: 1px solid #33f;
+}
+
+label {
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #666;
+}
+
+input {
+	padding: 1rem;
+}
+
+textarea {
+	padding: 1rem;
+}
+
+[type="text"], [type="email"], [type="submit"], option, textarea, label {
+	width: 100%;
+	display: block;
+	/* margin-bottom: 20px; */
+}
+
+.rad {
+	font-family: sans-serif;
+	font-size: 1.5rem;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+   
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 0px 20px 20px 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+  background: #ccc;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #DDDDDD;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.coluna {
+	float: left; /* Right inverte a ordem, de 123 passaria para 321 */
+	display: block;
+	width: 30%;
+	padding: 5px;
+	background: beige;
+	border: 1px solid black;
+	font-size: 1.5em;
+	color: black;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.coluna-03 {
+	columns: 100px 2;
+	width: 50%;
+}
+
+.coluna-100 {
+	width: 100%;
+}
+
+iframe {
+	width: 100%;
+	/* height: 400px; */
+}
+
+/* Mobile First */
+@media (min-width: 769px) {
+	body {
+		background-color: teal;
+		color: #fff;
+	}
+	p, h3, li, a {
+		color: whitesmoke;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px){
+	nav {
+		width: 30vw;
+	}
+	article {
+		width: 70vw;
+	}
+	.coluna {
+		width: 50vw;
+		min-width: unset;
+	}
+}
+
+/* Smartphone */
+@media (max-width: 425px){
+	nav, 
+	article, 
+	.coluna {
+		width: 100%;
+		min-width: 320px;
+	}
+}
