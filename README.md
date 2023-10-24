@@ -22,7 +22,7 @@
 git clone https://github.com/unameddev/curso-frontend.git
 
 ## Commits
-Informação de alteração
+    Informação de alteração
     - Após testado todo seu código
     - git add *
     - git commit -m "descrição do commit"
