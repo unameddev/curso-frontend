@@ -1,6 +1,8 @@
+# Curso Front-end
+### EBAC
 
 # GIT
-## versionamento
+## Conceitos de versionamento
     - Histórico
     - Controle de versão
     - Quem alterou
@@ -18,11 +20,14 @@
 
 ## Clonar projeto
 git clone https://github.com/unameddev/curso-frontend.git
+
 ## Commits
 Informação de alteração
     - Após testado todo seu código
     - git add *
     - git commit -m "descrição do commit"
     - git push (enviar alterações para o repositório)
+    - git pull (puxar / trazer alterações do repositório do Github para a máquina)
+
 ## Gitflow
 Fluxo do Git
