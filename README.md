@@ -30,8 +30,7 @@ git clone https://github.com/unameddev/curso-frontend.git
     - git pull (puxar / trazer alterações do repositório do Github para a máquina)
     - git fetch --all (verifica se teve alguma alteração no repositório)
 
-
-## Gitflow
+## GitFlow
 Fluxo do Git
 
 ### Branchs
@@ -51,5 +50,24 @@ São ramificações / versões paralelas
 
 ### Merge
 Mescla de branchs
+Você pode precisar resolver conflitos manualmente
+
     - git merge "main" (entre aspas é a branch que sera mesclada)
 
+### Pull Requests
+Mescla de branchs no repositório
+Permite code review
+    - O repositório resolve os conflitos automaticamente
+
+### Configura o GitFlow
+
+    - git flow init (iniciar configuracao do git flow, criando e setando branchs para todo o projeto)
+
+    - git flow feature start {nome-da-feature}
+    - git flow feature finish {nome-da-feature} 
+
+    o {feature} no codigo acima tambem pode ser trocado para outros seletores, são eles:
+    - bugfix
+    - release
+    - hotfix
+    - support
