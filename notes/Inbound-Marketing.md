@@ -34,3 +34,7 @@
 - Post para redes sociais: texto + foto + url curta
 - Incluir hospedagem (servidor web)
 - Git - histórico de evolução (commits detalhados)
+
+
+## Newsletter
+- Para conseguir atingir e não ser barrado pelos filtros de gerenciadores de e-mail (gmail, outlook, hotmail e outro), utilizamos no e-mail marketing, uma codificação não-semântica, com tables.
