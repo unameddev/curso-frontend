@@ -1,26 +1,29 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #f5f5f5;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .main-container {
     display: block;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 }
 
 .container {
     float: left;
     display: block;
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
     margin: 0 auto;
     max-width: 1198px;
+    max-width: 100%;
 }
 
 header {
@@ -130,7 +133,8 @@ nav a:hover {
 section article {
     float: left;
     display: block;
-    width: 70%;
+    width: 67%;
+    max-width: 70%;
 }
 
 footer {
@@ -152,6 +156,44 @@ footer small {
 }
 
 .cognito {
+    width: 300px;
     height: 400px !important;
     overflow: hidden;
+    max-width: 300px !important;
+}
+
+@media (min-width: 769px) {
+    section nav {
+        width: 30%;
+    }
+    section article {
+        width: 60%;
+    }
+    .container {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section nav {
+        width: 30%;
+    }
+    section article {
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    section nav,
+    section article {
+        width: 100%;
+        min-width: 320px;
+    }
+    .container {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 100%;
+    }
 }
