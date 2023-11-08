@@ -132,3 +132,20 @@ Subtrai 1 unidade: --
 - Menor ou igual <=
 
 Para consultar: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
+# Code Together
+
+## Lista de exercícios
+1. Descrever um algoritmo para resolver o problema da travessia de modo 'seguro':
+Um homem precisa atravessar um rio com um barco que possui capacidade apenas para carregar ele mesmo e mais um de seus três pertences, que são: um lobo, uma cabra e um maço de alfafa. Em cada viagem só poderá ir o homem e apenas um de seus pertences. A seguinte regra deverá ser respeitada: o lobo não pode ficar sozinho com a cabra e nem a cabra sozinha com o maço de alfafa. Escreva um algoritmo para fazer a travessia dos pertences que estão em uma margem do rio para a outra.
+
+- Inicio
+- A = Homem / B = Lobo / C = Cabra / D = Alfafa / E = Começo / F = Destino
+- E = A + B + C + D
+- A + C -> F = C
+- A + B -> F = B + C
+- A + C -> E = C + D
+- A + D -> F = B + D
+- A + C -> F = A + B + C + D
+
+2. JS: Exibir média de 3 números com entradas pelo formulário HTML. ✅
