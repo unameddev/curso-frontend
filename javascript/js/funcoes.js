@@ -123,6 +123,26 @@ function validaEmail(elemento){
     });
 }
 
+function validaTelefone(elemento){
+
+    elemento.addEventListener('focusout', function(event){
+        event.preventDefault();
+
+        const telefoneValido = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+
+        if(this.value.match(telefoneValido)){
+            document.querySelector('.mensagem').innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else{
+            document.querySelector('.mensagem').innerHTML = 'Telefone inválido. O formato deve ser (XX) XXXXX-XXXX ';
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false;
+        }
+    })
+}
+
 function validaCep(elemento){
 
     elemento.addEventListener('focusout', function(event){
@@ -143,6 +163,46 @@ function validaCep(elemento){
     });
 }
 
+function validaCidade(elemento){
+
+    elemento.addEventListener('focusout', function(event){
+        event.preventDefault();
+
+        const cidadeValida = /[a-z]/i;
+
+        if(this.value.match(cidadeValida)){
+            document.querySelector('.mensagem').innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else{
+            document.querySelector('.mensagem').innerHTML = 'Cidade inválida';
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false;
+        }
+    });
+}
+
+function validaUF(elemento){
+
+    elemento.addEventListener('focusout', function(event){
+        event.preventDefault();
+
+        const ufValido = /([a-z]{2})/i;
+
+        if(this.value.match(ufValido)){
+            document.querySelector('.mensagem').innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else{
+            document.querySelector('.mensagem').innerHTML = 'UF inválido';
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false;
+        }
+    });
+}
+
 function formatarCEP() {
     const cepInput = document.getElementById('cepInput');
 
@@ -152,10 +212,31 @@ function formatarCEP() {
     // Adiciona o hífen se necessário
     if (cepFormatado.length >= 5) {
       cepInput.value = cepFormatado.slice(0, 5) + '-' + cepFormatado.slice(5, 8);
-    } else {
+    } else{
       cepInput.value = cepFormatado;
     }
 }
+
+function formatarTelefone(){
+    const telInput = document.getElementById('telInput');
+
+    const telFormatado = telInput.value.replace(/\D/g, '');
+
+    if(telFormatado.length >= 2) {
+        telInput.value = `(${telFormatado.slice(0, 2)}) `;
+      }
+
+      // Adiciona o hífen se necessário
+      if (telFormatado.length >= 7) {
+        telInput.value += `${telFormatado.slice(2, 7)}-${telFormatado.slice(7, 11)}`;
+      } else{
+        telInput.value += telFormatado.slice(2, 7);
+      }
+}
+
+document.getElementById('telInput').addEventListener('input', function(event) {
+    formatarTelefone(); // Chama a função para formatar o telefone enquanto o usuário digita
+});
 
 document.getElementById('cepInput').addEventListener('input', function(event) {
     formatarCEP(); // Chama a função para formatar o CEP enquanto o usuário digita
@@ -164,7 +245,10 @@ document.getElementById('cepInput').addEventListener('input', function(event) {
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
 let camposNumericos = document.querySelectorAll('input.numero');
 let camposEmail = document.querySelectorAll('input.email');
-let camposCep = document.querySelectorAll('input.cep')
+let camposCep = document.querySelectorAll('input.cep');
+let camposTelefone = document.querySelectorAll('input.telefone');
+let camposCidade = document.querySelectorAll('input.cidade');
+let camposUF = document.querySelectorAll('input.uf');
 
 for(let emFoco of camposObrigatorios){
     validaCampo(emFoco);
@@ -180,4 +264,16 @@ for(let emFoco of camposEmail){
 
 for(let emFoco of camposCep){
     validaCep(emFoco);
+}
+
+for(let emFoco of camposTelefone){
+    validaTelefone(emFoco);
+}
+
+for(let emFoco of camposCidade){
+    validaCidade(emFoco);
+}
+
+for(let emFoco of camposUF){
+    validaUF(emFoco);
 }
