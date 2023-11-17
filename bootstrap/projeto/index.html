@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/custom.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Logo</h1>
+                    <img src="./images/logo.jpg" alt="Logo" id="logo" oncontextmenu="return false;" onmousedown="return false;">
                 </div>
 
                 <div class="col">
@@ -31,31 +32,204 @@
     <section id="sobre">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <h1>Sobre nós</h1>
+                <div class="col-md-7 col-sm-12">
+                    <h2>Sobre nós</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laudantium obcaecati pariatur dicta reprehenderit perferendis in sint soluta aperiam, culpa quos officia eos? Eveniet voluptatem ipsa doloremque, culpa corporis hic.</p>
-                    <a class="btn btn-lg btn-success">Botão</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nulla modi veritatis ipsam quidem nobis totam unde, ipsa dolores adipisci illum ad voluptates voluptatibus quia, quae delectus dolore vel corporis.</p>
+                    <a class="btn btn-lg btn-dark" href="#produtos">Conhecer Produtos</a>
                 </div>
-                <div class="col-md-4 colsm-12">
-                    
+                <div class="col-md-5 colsm-12">
+                    <img src="./images/code.jpg" alt="Imagem Exemplo" class="img-fluid" >
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="row">
-            <!-- Unidade = Largura da área dividido por 12 (col-1 ao col-12) -->
-            <div class="col-md-5 col-sm-12">Linha 1 - Coluna 1</div>
-            <div class="col-md-7 col-sm-12">Linha 1 - Coluna 2</div>
+    <section id="produtos">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <h2>Produtos</h2>
+
+                    <div class="card">
+                        <img src="./images/clothe.jpg" alt="Imagem Roupa" class="img-fluid produto">
+                        <div class="class-body">
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
+                            <a class="btn btn-dark d-flex text-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modal-1">Ver Produto</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/wine.jpg" alt="Imagem Vinho" class="img-fluid produto">
+                        <div class="class-body">
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
+                            <a class="btn btn-dark card-btn" data-bs-toggle="modal" data-bs-target="#modal-2">Ver Produto</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/gas-station.jpg" alt="Imagem Posto de Gasolina" class="img-fluid produto">
+                        <div class="class-body">
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
+                            <a class="btn btn-dark card-btn" href="#produto-3">Ver Produto</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col">Linha 2 - Coluna 1</div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2>Contato</h2>
+                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <form class="form">
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="email" placeholder="digite seu email">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control" name="" rows="5"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-dark" id="btn-confirm-form">Solicitar Cotação</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col">Linha 3 - Coluna 1</div>
-            <div class="col">Linha 3 - Coluna 2</div>
-            <div class="col">Linha 3 - Coluna 3</div>
+    </section>
+
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Produto 1</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tamanho</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>P</td>
+                                <td>R$100</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>R$200</td>
+                            </tr>
+                            <tr>
+                                <td>G</td>
+                                <td>R$300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Produto 2</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira os detalhes e preços</h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Litragem</th>
+                                <th>Ano</th>
+                                <th>Marca</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1L</td>
+                                <td>1982</td>
+                                <td>Copenhagem</td>
+                                <td>R$1655,99</td>
+                            </tr>
+                            <tr>
+                                <td>2L</td>
+                                <td>1997</td>
+                                <td>Marvos</td>
+                                <td>R$2050,99</td>
+                            </tr>
+                            <tr>
+                                <td>4L</td>
+                                <td>1899</td>
+                                <td>Lopperg</td>
+                                <td>R$4599,99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Produto 3</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira os valores</h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
