@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/custom.css">
     <title>Document</title>
 </head>
@@ -39,7 +39,7 @@
                     <a class="btn btn-lg btn-dark" href="#produtos">Conhecer Produtos</a>
                 </div>
                 <div class="col-md-5 colsm-12">
-                    <img src="./images/code.jpg" alt="Imagem Exemplo" class="img-fluid" >
+                    <img oncontextmenu="return false;" onmousedown="return false;" src="./images/code.jpg" alt="Imagem Exemplo" class="img-fluid" >
                 </div>
             </div>
         </div>
@@ -53,29 +53,29 @@
                     <h2>Produtos</h2>
 
                     <div class="card">
-                        <img src="./images/clothe.jpg" alt="Imagem Roupa" class="img-fluid produto">
+                        <img oncontextmenu="return false;" onmousedown="return false;" src="./images/clothe.jpg" alt="Imagem Roupa" class="img-fluid produto">
                         <div class="class-body">
                             <h5 class="card-title">Lorem ipsum dolor</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
-                            <a class="btn btn-dark d-flex text-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modal-1">Ver Produto</a>
+                            <a class="btn btn-dark card-btn" data-bs-toggle="modal" data-bs-target="#modal-1">Ver Produto</a>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="./images/wine.jpg" alt="Imagem Vinho" class="img-fluid produto">
+                        <img oncontextmenu="return false;" onmousedown="return false;" src="./images/wine.jpg" alt="Imagem Vinho" class="img-fluid produto">
                         <div class="class-body">
                             <h5 class="card-title">Lorem ipsum dolor</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum itaque, praesentium ratione aperiam corrupti vero rem voluptatibus tempore rerum unde assumenda cumque nulla ex a. Explicabo minima qui similique voluptatibus.</p>
                             <a class="btn btn-dark card-btn" data-bs-toggle="modal" data-bs-target="#modal-2">Ver Produto</a>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="./images/gas-station.jpg" alt="Imagem Posto de Gasolina" class="img-fluid produto">
+                        <img oncontextmenu="return false;" onmousedown="return false;" src="./images/gas-station.jpg" alt="Imagem Posto de Gasolina" class="img-fluid produto">
                         <div class="class-body">
                             <h5 class="card-title">Lorem ipsum dolor</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dignissimos, consectetur voluptates natus quam aut sunt perferendis pariatur deleniti vel dolorum, consequatur ex aliquid reiciendis minus! Illo quos libero expedita!</p>
-                            <a class="btn btn-dark card-btn" href="#produto-3">Ver Produto</a>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quos culpa libero debitis eaque sunt id numquam aut iure possimus? Corporis quasi repudiandae quaerat soluta consectetur ipsum dicta quas assumenda.</p>
+                            <a class="btn btn-dark card-btn" data-bs-toggle="modal" data-bs-target="#modal-3">Ver Produto</a>
                         </div>
                     </div>
 
@@ -94,15 +94,15 @@
                 <div class="col-md-6 col-sm-12">
                     <form class="form">
                         <div class="input-group">
-                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                            <input class="form-control" type="text" name="nome" placeholder="Digite seu nome" required>
                         </div>
 
                         <div class="input-group">
-                            <input class="form-control" type="text" name="email" placeholder="digite seu email">
+                            <input class="form-control" type="text" name="email" placeholder="Digite seu email" required>
                         </div>
 
                         <div class="input-group">
-                            <textarea class="form-control" name="" rows="5"></textarea>
+                            <textarea class="form-control" name="" rows="5" placeholder="Digite sua mensagem" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-lg btn-dark" id="btn-confirm-form">Solicitar Cotação</button>
@@ -210,21 +210,21 @@
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>Gasolina</th>
+                                <th>Etanol</th>
+                                <th>Diesel</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Comum - R$5,09</td>
+                                <td>Comum - R$3,89</td>
+                                <td>Comum - R$5,59</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Aditivada - R$5,79</td>
+                                <td>Aditivado - R$4,69</td>
+                                <td>Turbo - R$6,09</td>
                             </tr>
                         </tbody>
                     </table>
@@ -233,6 +233,6 @@
         </div>
     </div>
 
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
