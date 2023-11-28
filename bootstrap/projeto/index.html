@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/regular.min.css">
     <link rel="stylesheet" href="./style/custom.css">
-    <title>Document</title>
+    <title>Home page</title>
 </head>
 <body>
 
@@ -18,16 +23,49 @@
 
                 <div class="col">
                     <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./componentes.html">Componentes</a></li>
                     </ul>
                 </div>
 
             </div>
         </div>
     </header>
+    
+    <section>
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item ratio ratio-21x9 active">
+                    <img src="./images/art-1.jpg" class="d-block w-100" alt="Imagem artistica">
+                  </div>
+                  <div class="carousel-item ratio ratio-21x9">
+                    <img src="./images/art-2.jpg" class="d-block w-100" alt="Imagem artistica">
+                  </div>
+                  <div class="carousel-item ratio ratio-21x9">
+                    <img src="./images/art-3.jpg" class="d-block w-100" alt="Imagem artistica">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </section>
 
     <section id="sobre">
         <div class="container">
@@ -145,7 +183,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -192,7 +230,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -229,10 +267,20 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 
     <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+        const myCarouselElement = document.querySelector('#carouselExampleIndicators')
+        
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 3500
+        })
+    </script>
 </body>
 </html>

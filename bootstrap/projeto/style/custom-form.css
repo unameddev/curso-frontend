@@ -4,6 +4,13 @@ textarea.form-control {
 }
 
 input#nome,
-input#email {
+input#email,
+input#tel {
     width: 100%;
+}
+
+label a,
+p a{
+    text-decoration: underline;
+    color: black;
 }
